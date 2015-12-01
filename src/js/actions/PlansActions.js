@@ -1,6 +1,7 @@
 import AppDispatcher from '../dispatchers/AppDispatcher.js';
 import NotificationActions from '../actions/NotificationActions';
 import PlansConstants from '../constants/PlansConstants';
+import PlansActionsHandler from '../services/PlansActionsHandler';
 import TripleOApiService from '../services/TripleOApiService';
 import TripleOApiErrorHandler from '../services/TripleOApiErrorHandler';
 
@@ -27,7 +28,7 @@ export default {
     });
     NotificationActions.notify({
       title: 'Plan Activated',
-      message: 'The plan ' + planName + ' activated.',
+      message: 'The plan ' + planName + ' was activated.',
       type: 'success'
     });
   }
